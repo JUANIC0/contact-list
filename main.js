@@ -8,12 +8,14 @@ const listadoTareas = document.querySelector('.listado-tareas')
 
 const db = window.localStorage
 
-btnAgregarTarea.oneclick = () => {
-let contacto = {
- id: Math.random(1,100),
-nombre: nombre.value,
-numero: numero.value,
-direccion: direccion.value,
+btnAgregarTarea.onclick = () => {
+    let contacto = {
+       id: Math.random(1,100),
+       nombre: nombre.value,
+       numero: numero.value,
+       direccion: direccion.value,
 }
 guardarContacto(db, contacto)
 }
+cargarContactos(db, listadoTareas)
+
