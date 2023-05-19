@@ -1,88 +1,148 @@
-*,::after,*::before{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-html {
-
-font-family: 'Popins', sans-serif;
-font-size: 62.5%;
+h1 {
+    margin-top: 0;
 }
 
-body {
-
-background-color: rgb(55, 52, 52);
-color: ghostwhite;
-
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.container{
-
-height: 100vh;
-width: 70vh;
-margin: 2rem auto;
-
-
-}
-
-.container h2{
-text-transform:  uppercase;
-text-align: center;
-margin-bottom: 1rem;
-font: 2.3rem;
-}
-
-.formulario-datos{
-display: block;
-width: 50%;
-margin: 1rem auto;
-display: flex;
-flex-direction: column;
-
-
-}
-.formulario-datos input{
-margin: 1rem 0rem;
-line-height: 3rem;
-background: none;
-outline: 0;
-border: 0;
-color: antiquewhite;
-}
-.formulario-datos input:active{
-border-bottom: 1px solid deepskyblue;
-}
-.formulario-datos input:focus {
-    border-bottom: 1px solid deepskyblue;
-}
-.formulario-datos button {
-    margin: 1rem 0rem;
-    background-color: rgb(42, 57, 173);
-    border: 0;
-    outline: 0;
-    height: 3rem;
+#nombre-input,
+#apellido-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
     border-radius: 5px;
-    text-transform: uppercase;
-    color: azure;
-}
-.listado-tareas{
-display: flex;
-flex-direction: column;
-
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom-color 0.3s ease;
 }
 
-.tarea{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-height: 4rem;
+#nombre-input:focus,
+#apellido-input:focus {
+    border-bottom-color: #2196F3;
+    outline: none;
 }
 
-.icono{
-color: tomato;
-cursor: pointer;
-
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #0D47A1;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2196F3;
+    color: white;
+}
+
+#update-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#update-nombre-input,
+#update-apellido-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom-color 0.3s ease;
+}
+
+#update-nombre-input:focus,
+#update-apellido-input:focus {
+    border-bottom-color: #2196F3;
+    outline: none;
+}
+
+#update-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#update-btn:hover {
+    background-color: #0D47A1;
+}
+
+#cancel-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #F44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#cancel-btn:hover {
+    background-color: #B71C1C;
+}
+
+.edit-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #FFC107;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #FFA000;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #DC3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #B71C1C;
+}
