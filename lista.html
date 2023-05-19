@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <title>Lista de contactos</title>
 </head>
+
 <body>
- <div class="container">
-<!-- head -->
- <h2>Lista de Contactos</h2>
- <!--formulario de datos-->
- <div class="formulario-datos">
-    <input type="texto" class="nombre" placeholder="nombre">
-    <input type="texto" class="numero" placeholder="numero">
-    <input type="texto" class="direccion" placeholder="direccion">
-    <button class="btn-agregar-tarea">agregar tarea</button>
-    <!--listado de tareas-->
-    <div class="listado-tareas">
-        
-                <span class="material-symbols icono">
-                    delete
-                </span>
-                </div>
-                <script src="funciones.js"></script>
-                <script src="main.js"></script>
+    <div id="container">
+        <h1>Contact List</h1>
+        <div id="input-container">
+            <input type="text" id="nombre-input" placeholder="Enter nombre">
+            <input type="text" id="apellido-input" placeholder="Enter apellido">
+            <button id="add-btn">Add</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="update-container">
+            <input type="text" id="update-nombre-input">
+            <input type="text" id="update-apellido-input">
+            <button id="update-btn">Update</button>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
